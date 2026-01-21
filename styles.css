@@ -1,0 +1,128 @@
+html, body{ width:100%; overflow-x:hidden; }
+*{ box-sizing:border-box; font-family: Arial, Helvetica, sans-serif; }
+body{ margin:0; background:#fff; }
+
+/* Header */
+.topbar{
+  height: 86px;
+  padding: 0 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background: linear-gradient(90deg, #0b0b0f 0%, #1a1a1f 60%, #0b0b0f 100%);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.brand-logo{ height:40px; width:auto; max-width:70vw; }
+
+.hamburger{
+  width:56px; height:46px;
+  border-radius:8px;
+  border:1px solid rgba(255,255,255,0.20);
+  background: rgba(255,255,255,0.06);
+  display:flex; flex-direction:column;
+  justify-content:center; gap:7px;
+  padding:0 16px; cursor:pointer; flex:0 0 auto;
+}
+.hamburger span{
+  height:2px; background:rgba(255,255,255,0.85);
+  border-radius:999px; display:block;
+}
+
+/* Contenido estilo “móvil siempre” */
+.wrap{
+  width: min(430px, 100%);
+  margin: 0 auto;
+  padding: 14px 14px 40px;
+}
+
+h1{
+  margin: 10px 0 22px;
+  font-size: 56px;
+  font-weight: 900;
+  letter-spacing: -1.2px;
+  color:#000;
+}
+
+/* Card */
+.ticket-card{
+  width:100%;
+  background:#fff;
+  border-radius:10px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.10);
+  padding: 18px;
+  margin-bottom: 18px;
+  overflow:hidden;
+
+  display:grid;
+  grid-template-columns: 120px 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 14px;
+  row-gap: 14px;
+  grid-template-areas:
+    "thumb texts"
+    "actions actions";
+}
+
+.thumb{
+  grid-area: thumb;
+  width:120px; height:70px;
+  border-radius:8px;
+  object-fit:cover;
+  object-position:center;
+  background:#ddd;
+}
+
+.texts{ grid-area: texts; min-width:0; }
+
+.title{
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1.05;
+  color:#111;
+  margin-bottom: 6px;
+}
+.date, .place{
+  font-size: 18px;
+  color:#222;
+  line-height:1.2;
+}
+.place{
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.actions{
+  grid-area: actions;
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.link{
+  font-size: 18px;
+  color:#111;
+  text-decoration:none;
+}
+.link:hover{ text-decoration:underline; }
+
+/* Botón como link */
+.btn{
+  background:#36a892;
+  color:#fff;
+  border:none;
+  padding: 12px 24px;
+  border-radius:999px;
+  font-size: 18px;
+  font-weight:700;
+  cursor:pointer;
+  white-space:nowrap;
+
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+.btn:hover{ opacity:0.92; }

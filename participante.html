@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Participante</title>
+  <link rel="stylesheet" href="./participante.css" />
+</head>
+
+<body>
+  <!-- HEADER CON LINKS (logo + avatar) -->
+  <header class="classic-topbar">
+    <img
+      class="jn-logo"
+      src="https://cdn-projects-build.joinnus.com/jweb-public-front/production/2617/static/images/joinnus-v2.svg"
+      alt="Joinnus"
+    />
+
+    <!-- Avatar directo (sin círculo verde) -->
+    <img
+      class="user-avatar"
+      src="https://cdn-projects-build.joinnus.com/jweb-public-front/production/2617/static/images/avatar.svg"
+      alt="Usuario"
+    />
+  </header>
+
+  <main class="page">
+    <section class="info-box">
+      <div class="info-icon">i</div>
+      <p>
+        Los datos sobre el evento y la identidad del organizador es de entera responsabilidad del mismo.
+        Estos datos pueden variar. Para mayor información revisar
+        <a href="#" onclick="return false;">Términos y Condiciones</a>
+      </p>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <div class="step-pill"><span id="stepNow">1</span> / <span id="stepTotal">4</span></div>
+        <div class="card-title">Participante</div>
+        <button class="chev" aria-label="Expandir" type="button">⌄</button>
+      </div>
+
+      <div class="event-row">
+        <div class="col">
+          <div class="label">Evento</div>
+          <div class="value big" id="evento"></div>
+        </div>
+        <div class="col right-align">
+          <div class="label">Ubicación</div>
+          <div class="value big" id="ubicacion"></div>
+        </div>
+      </div>
+
+      <hr class="divider"/>
+
+      <div class="form">
+        <div class="field full">
+          <label>País*</label>
+          <div class="select">
+            <span id="pais"></span>
+            <span class="arrow">▾</span>
+          </div>
+        </div>
+
+        <div class="row2">
+          <div class="field">
+            <label>Tipo*</label>
+            <div class="select">
+              <span id="tipo"></span>
+              <span class="arrow">▾</span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Número*</label>
+            <input id="numero" value="" disabled />
+          </div>
+        </div>
+
+        <div class="field full">
+          <label>Nombres*</label>
+          <input id="nombres" value="" disabled />
+        </div>
+
+        <div class="field full">
+          <label>Apellidos*</label>
+          <input id="apellidos" value="" disabled />
+        </div>
+      </div>
+
+      <hr class="divider"/>
+
+      <div class="actions2">
+       <a class="btn-outline" id="editarLink" href="./editar.html">
+  Editar <span class="pencil">✎</span>
+</a>
+
+        <!-- BOTÓN EMITIR CON IMAGEN -->
+        <button class="btn-green emitir-btn" id="emitirBtn" type="button">
+  <span class="emitir-text">Emitir</span>
+
+  <img
+    class="emitir-icon"
+    src="https://i.imgur.com/84xlpaZ.png"
+    alt="QR"
+    referrerpolicy="no-referrer"
+    onerror="this.style.display='none';"
+  />
+</button>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Scripts para que SOLO cambies data.js -->
+  <script src="./data.js"></script>
+  <script src="./participante.js"></script>
+</body>
+</html>

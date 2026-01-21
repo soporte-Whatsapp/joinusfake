@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Editar participante</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./editar.css" />
+</head>
+
+<body>
+  <header class="classic-topbar">
+    <div class="">
+      <img class="jn-mini" src="https://cdn-projects-build.joinnus.com/jweb-public-front/production/2617/static/images/joinnus-v2.svg" alt="Joinnus">
+    </div>
+
+    <div class="" aria-label="Usuario">
+      <img class="user-avatar" src="https://cdn-projects-build.joinnus.com/jweb-public-front/production/2617/static/images/avatar.svg" alt="Usuario"/>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="card">
+
+      <div class="card-head">
+        <div class="step-pill"><span id="stepNow">1</span> / <span id="stepTotal">4</span></div>
+        <div class="card-title">Participante</div>
+      </div>
+
+      <div class="event-row">
+        <div class="col">
+          <div class="label">Evento</div>
+          <div class="value big" id="evento">NOCHE BLANQUIAZUL 2026</div>
+        </div>
+        <div class="col right-align">
+          <div class="label">Ubicación</div>
+          <div class="value big" id="ubicacion">Sur – 20% Dsct.</div>
+        </div>
+      </div>
+
+      <hr class="divider"/>
+
+      <!-- selector Amigos -->
+      <div class="friends-row">
+        <span class="nuevo-pill">⭐ Nuevo</span>
+        <div class="select-strong">
+          <span id="grupo">Amigos</span>
+          <span class="arrow">▼</span>
+        </div>
+      </div>
+
+      <hr class="divider"/>
+
+      <!-- aviso amarillo -->
+      <section class="warn-box">
+        <div class="warn-icon">i</div>
+        <p>Los datos ingresados deben ser idénticos al documento de identidad</p>
+      </section>
+
+      <button class="btn-outline full" type="button" id="limpiarBtn">Limpiar Datos</button>
+
+      <!-- form -->
+      <div class="form">
+        <div class="field">
+          <label>País*</label>
+          <div class="select-line">
+            <span id="pais">Perú</span>
+            <span class="arrow">▼</span>
+          </div>
+        </div>
+
+        <div class="row2">
+          <div class="field">
+            <label>Tipo*</label>
+            <div class="select-line">
+              <span id="tipo">DNI</span>
+              <span class="arrow">▼</span>
+            </div>
+          </div>
+
+          <div class="field number-wrap">
+            <label>Número*</label>
+            <div class="number-search">
+              <input id="numero" value="73092753" />
+              <button class="search-btn" type="button" aria-label="Buscar">🔍</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Nombres*</label>
+          <input id="nombres" value="" placeholder="" />
+        </div>
+
+        <div class="field">
+          <label>Apellidos*</label>
+          <input id="apellidos" value="" placeholder="" />
+        </div>
+      </div>
+
+      <hr class="divider"/>
+
+      <!-- switch -->
+      <div class="switch-row">
+        <label class="switch">
+          <input type="checkbox" id="addFriends">
+          <span class="slider"></span>
+        </label>
+
+        <div class="switch-text">
+          <span>Agregar a mis amigos</span>
+          <span class="nuevo-pill small">⭐ Nuevo</span>
+        </div>
+      </div>
+
+      <!-- botones -->
+      <div class="actions">
+        <a class="btn-outline" href="./participante.html">Salir</a>
+        <button class="btn-green" id="guardarBtn" type="button">Guardar</button>
+      </div>
+
+    </section>
+  </main>
+
+  <script src="./editar.js"></script>
+</body>
+</html>

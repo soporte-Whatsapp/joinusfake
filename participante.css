@@ -1,0 +1,268 @@
+/* ================== RESET ================== */
+*{ box-sizing:border-box; }
+
+html,body{
+  margin:0;
+  padding:0;
+  width:100%;
+  overflow-x:hidden;
+  font-family:"Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background:#dfeaf7; /* fondo azul claro (original) */
+  color:#111;
+}
+
+/* ================== HEADER ================== */
+.classic-topbar{
+  height:78px;
+  padding:0 16px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:linear-gradient(90deg,#0b0b0f 0%, #1a1a1f 55%, #0b0b0f 100%);
+}
+
+.jn-logo{
+  height:34px;
+  width:auto;
+  display:block;
+}
+
+/* Círculo verde con avatar como original */
+.user-badge{
+  width:44px;
+  height:44px;
+  border-radius:999px;
+  background:#18d1b4;
+  display:grid;
+  place-items:center;
+}
+
+.user-avatar{
+  width:22px;
+  height:22px;
+  display:block;
+  object-fit:contain;
+}
+
+/* ================== PAGE ================== */
+.page{
+  width:min(460px, 100%);
+  margin:0 auto;
+  padding:18px 14px 40px;
+}
+
+/* ================== INFO BOX ================== */
+.info-box{
+  background:#e8f2ff;
+  border-left:6px solid #2b7cff;
+  border-radius:14px;
+  padding:16px;
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  margin-bottom:18px;
+}
+
+.info-icon{
+  width:30px;
+  height:30px;
+  border-radius:999px;
+  background:#2b7cff;
+  color:#fff;
+  display:grid;
+  place-items:center;
+  font-weight:900;
+  flex:0 0 auto;
+}
+
+.info-box p{
+  margin:0;
+  color:#2b2b2b;
+  line-height:1.45;
+  font-size:14.5px;
+}
+
+.info-box a{
+  color:#2f8f7f;
+  text-decoration:none;
+  font-weight:800;
+}
+.info-box a:hover{ text-decoration:underline; }
+
+/* ================== CARD ================== */
+.card{
+  background:#fff;
+  border-radius:18px;
+  box-shadow:0 8px 18px rgba(0,0,0,.08);
+  padding:18px;
+}
+
+/* ================== CARD HEADER ================== */
+.card-head{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:14px;
+}
+
+.step-pill{
+  padding:6px 10px;
+  border-radius:999px;
+  background:#1e1e22;
+  color:#fff;
+  font-weight:900;
+  font-size:14px;
+}
+
+.card-title{
+  font-size:28px;
+  font-weight:900;
+  flex:1;
+}
+
+.chev{
+  border:none;
+  background:transparent;
+  font-size:22px;
+  cursor:pointer;
+  line-height:1;
+  color:#111;
+}
+
+/* ================== EVENTO ================== */
+.event-row{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:16px;
+  align-items:start;
+  padding-bottom:8px;
+}
+
+.label{
+  color:#8f9aad;   /* más claro como original */
+  font-size:13.5px;
+  margin-bottom:6px;
+}
+
+.value.big{
+  font-size:22px;
+  font-weight:900;
+  line-height:1.15;
+  word-break:normal;
+  overflow-wrap:break-word;
+}
+
+.right-align{ text-align:right; }
+
+/* ================== DIVIDERS ================== */
+.divider{
+  border:none;
+  border-top:1.5px solid #e3ecf8; /* más fino como original */
+  margin:16px 0;
+}
+
+/* ================== FORM ================== */
+.form{ padding-top:2px; }
+
+.field{
+  margin-bottom:12px;
+  min-width:0;
+}
+
+.field label{
+  display:block;
+  font-size:14px;
+  color:#8b8b8b;
+  margin-bottom:6px;
+}
+
+/* Select fake */
+.select{
+  border:1.8px solid #d6dfeb; /* borde más suave */
+  border-radius:12px;
+  padding:14px 14px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#fff;
+  color:#7a8799; /* gris suave (original) */
+  font-weight:800;
+  min-width:0;
+}
+
+.arrow{
+  color:#1f4e8c;
+  font-weight:900;
+}
+
+/* row tipo / número */
+.row2{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:12px;
+}
+
+input{
+  width:100%;
+  border:1.8px solid #d6dfeb; /* borde suave */
+  border-radius:12px;
+  padding:14px 14px;
+  background:#fff;
+  color:#9aa6b6; /* disabled gris claro como original */
+  font-weight:800;
+  min-width:0;
+}
+input:disabled{ opacity:1; }
+
+/* ================== BOTONES ================== */
+.actions2{
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+
+.btn-outline,
+.btn-green{
+  flex:1;
+  height:56px;
+  border-radius:999px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:900;
+  text-decoration:none;
+  gap:10px;
+}
+
+/* Editar */
+.btn-outline{
+  border:2px solid #111;
+  background:#fff;
+  color:#111;
+}
+
+/* Emitir */
+.btn-green{
+  border:none;
+  background:#18d1b4;
+  color:#0b0b0f;
+  cursor:pointer;
+  justify-content:center;
+  gap:10px;
+}
+
+/* Icono QR (más aire, tamaño correcto) */
+.emitir-icon{
+  width:22px;
+  height:22px;
+  object-fit:contain;
+  display:block;
+  margin-left:10px; /* separa del texto como original */
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width:360px){
+  .row2{ grid-template-columns:1fr; }
+  .event-row{ grid-template-columns:1fr; }
+  .right-align{ text-align:left; }
+}
