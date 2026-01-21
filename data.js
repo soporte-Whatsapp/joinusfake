@@ -5,9 +5,9 @@ window.TICKETS = [
     ubicacion: "Sur – 20% Dsct.",
     pais: "Perú",
     tipo: "DNI",
-    numero: "73092753",
-    nombres: "DOMINICK MOISES",
-    apellidos: "GUTIERREZ CHANCAYAURI"
+    numero: "72284158",
+    nombres: "YERSON RAUL",
+    apellidos: "FERNANDEZ MACHUCA"
   },
   {
     id: 2,
@@ -20,3 +20,4 @@ window.TICKETS = [
     apellidos: "PÉREZ FLORES"
   }
 ];
+
